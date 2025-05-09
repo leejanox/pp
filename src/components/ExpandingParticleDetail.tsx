@@ -39,7 +39,7 @@ const ExpandingParticleDetail = () => {
 
         <p style={{ marginTop: '1rem' }}>
             현재는 <strong>타임라인 기반 애니메이션</strong>이지만, 
-            추후에는 <strong>오디오 입력(마이크)</strong>이나 특정 사용자 인터랙션을 통해 파티클 확산 강도나 타이밍을 조절할 수 있도록 확장할 계획입니다.
+            추후에는 <strong>스크롤 이벤트</strong>를 사용하거나나 특정 사용자 인터랙션을 통해 파티클 확산 강도나 타이밍을 조절할 수 있도록 확장할 계획입니다.
         </p>
 
         <p style={{ marginTop: '1rem' }}>
@@ -69,15 +69,76 @@ const ExpandingParticleDetail = () => {
                 overflowX: 'auto'
             }}>
                 <code>{`// ExpandingParticle.tsx (useFrame)
-                            useFrame((state) => {
-                            const time = state.clock.getElapsedTime();
-                            matRef.current.uniforms.uTime.value = time;
-                            matRef.current.uniforms.uTexture.value = texture;
-                            if (levaUniforms?.uAlpha !== undefined)
-                                matRef.current.uniforms.uAlpha.value = levaUniforms.uAlpha;
-                            if (levaUniforms?.uDistortion !== undefined)
-                                matRef.current.uniforms.uDistortion.value = levaUniforms.uDistortion;
-                            });`
+                            //animation
+  const animateParticle = (index:number) => {
+    if(visible.includes(index)) return; //이미 보이는 애는 return
+    setVisible((prev) => [...prev, index]); 
+
+    requestAnimationFrame(()=>{
+      setTimeout(()=>{    
+        const ref = groupRefs[index];
+        if (!ref.current) return;
+    
+        const mat = (ref.current.children[0] as THREE.Points).material as THREE.ShaderMaterial;
+        if(!mat.uniforms) return; 
+
+        const distortionValue = { value : 0. }; //distortion 초기값 세팅
+        const bloomValue = { value : 0. }; //bloom 초기값 세팅
+        //console.log('currIndex : ',currIndex);
+        //gsap:alpha
+        gsap.fromTo(mat.uniforms.uAlpha,
+          {value:0.},
+          {value:1.,duration:2.5,delay:0.,ease:'power4.out',
+              onComplete:()=>{
+                  gsap.to(mat.uniforms.uAlpha,
+                      {value:0,duration:1.2,delay:0.,ease:'power4.in'}
+                  );
+              }
+          }
+        );
+        //gsap- distortion
+        gsap.fromTo(distortionValue,
+          //alpha 먼저 바뀌rp delat .2초
+          {value:0.},
+          {value:1.,duration:2.5,delay:.2,ease:'circ.out',
+              onUpdate:()=>{
+                mat.uniforms.uDistortion.value = distortionValue.value;
+              },
+              onComplete:()=>{
+                  gsap.to(distortionValue,
+                      {value:0.,duration:1.2,delay:0.,ease:'circ.in',
+                        onUpdate:()=>{
+                          mat.uniforms.uDistortion.value = distortionValue.value;
+                        },
+                        onComplete:()=>{
+                          setVisible((prev)=> prev.filter((i)=> i !== index)); 
+                        }
+                      }
+                  );
+              }
+          }
+        );
+        //gsap- bloom
+        gsap.fromTo(bloomValue,
+          {value:0.},
+          {value:2.8,duration:2.5,delay:0.,ease:'power1',
+            onUpdate:()=>{
+              setBloomStrength(bloomValue.value); //bloom 강도 업데이트
+            },
+            onComplete:()=>{
+              gsap.to(bloomValue,
+                {value:0.,duration:1.2,delay:0.,ease:'power1',
+                  onUpdate:()=>{
+                    setBloomStrength(bloomValue.value);
+                  }
+                }
+              );
+            }
+          },
+        );
+      },0);
+    }); //requestAnimationFrame을 통해서 애니메이션이 시작되도록 함
+  }`
                         }   
                 </code>
             </pre>

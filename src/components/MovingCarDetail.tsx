@@ -27,7 +27,7 @@ const MovingCarDetail = () => {
             <p>
                 <strong>Three.js + @react-three/fiber</strong>로 구현한 차량 이동 시뮬레이션입니다.<br />
                 <strong>CubicBezierCurve3</strong>를 기반으로 자동차가 경로를 따라 자연스럽게 이동하고, 
-                <strong>카메라는 진행 속도에 따라 Zoom out</strong>되며 차량을 따라가는 효과를 구현했습니다.
+                <strong>카메라는 차가 이동하는 애니메이션이 종료되면 자연스럽에 이동하는</strong> 효과를 구현했습니다.
             </p>
 
             <p style={{ marginTop: '1rem' }}>
@@ -45,8 +45,32 @@ const MovingCarDetail = () => {
             </ul>
 
             <p style={{ marginTop: '1rem' }}>
-                향후에는 <strong>트랙 색상 동적 변경</strong> 또는 <strong>카드 클릭 시 다음 씬 전환</strong> 기능을 추가할 계획입니다.
+                향후에는 <strong>카드 클릭 시 다음 씬 전환</strong> 기능을 추가할 계획입니다.
             </p>
+
+            <h4 style={{ marginTop: '2rem' }}>🧩 중요 코드 스니펫</h4>
+            <pre style={{
+                background: '#222',
+                color: '#0ff',
+                padding: '1rem',
+                borderRadius: '0.5rem',
+                fontSize: '0.85rem',
+                overflowX: 'auto'
+            }}>
+                <code>{`// MovingCar.tsx (카메라 추적 및 차량 위치 보간)
+        useFrame(({ clock }) => {
+        const t = Math.min(clock.getElapsedTime() / 5, 1); // 5초 동안 진행
+        const point = curve.getPoint(t);
+        const tangent = curve.getTangent(t);
+
+        carRef.current.position.copy(point);
+        carRef.current.lookAt(point.clone().add(tangent));
+
+        cameraRef.current.position.lerp(new Vector3(point.x, point.y + 2, point.z + 5), 0.05);
+        cameraRef.current.lookAt(carRef.current.position);
+        });`}
+                </code>
+            </pre>
         </div>
     )
 }
