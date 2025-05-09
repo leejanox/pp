@@ -49,7 +49,7 @@ const PhishingDetail = () => {
         </p>
 
         <img
-            src="src/assets/koshing_desktop_main.png"
+            src="/assets/koshing_desktop_main.png"
             alt="Phishing Service Preview"
             style={{
                 width: '100%',

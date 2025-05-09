@@ -48,7 +48,7 @@ const StairGameDetail = () => {
             <strong>🧪 주요 기술:</strong> Unity, C#, Object Pooling
         </p>
         <img
-            src="src/assets/unity.png"
+            src="/assets/unity.png"
             alt="무한의 계단 게임 미리보기"
             style={{
                 width: '100%',

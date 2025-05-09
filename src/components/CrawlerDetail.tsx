@@ -42,7 +42,7 @@ const CrawlerDetail = () => {
         </p>
 
         <img
-            src="src/assets/python.png"
+            src="/assets/python.png"
             alt="카페 수집 시스템 미리보기"
             style={{
                 width: '100%',

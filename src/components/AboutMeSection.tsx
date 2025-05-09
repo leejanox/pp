@@ -8,7 +8,7 @@ const AboutMeSection = () => {
             <h2>&lt;About Me /&gt;</h2>           
             <div className="content-wrapper">
                 <div className="me">
-                    <img src='src/assets/goeun.jpg' alt='goeun' className='me__img' />
+                    <img src='/assets/goeun.jpg' alt='goeun' className='me__img' />
                 </div>
                 <div className="about-grid">
                     <div className="item">

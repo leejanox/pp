@@ -70,7 +70,7 @@ const AverageDetail = () => {
         {['avg1.png', 'avg2.png', 'avg3.png', 'avg4.png'].map((img, idx) => (
             <img
                 key={idx}
-                src={`src/assets/average/${img}`}
+                src={`/assets/average/${img}`}
                 alt={`AVERAGE23 UI ${idx + 1}`}
                 style={{
                     width: '100%',

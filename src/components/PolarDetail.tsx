@@ -56,7 +56,7 @@ const PolarDetail = () => {
         {['1.png', '2.png', '3.png', '4.png'].map((img, idx) => (
             <img
                 key={idx}
-                src={`src/assets/polar/${img}`}
+                src={`/assets/polar/${img}`}
                 alt={`POLAR UI ${idx + 1}`}
                 style={{
                     width: '100%',
