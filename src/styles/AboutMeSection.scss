@@ -13,26 +13,27 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        gap: 20rem;
+        gap: 12rem;
         flex-wrap: wrap;
         max-width: 1200px;
         margin: 0 auto;
     }
 
     .me {
-        flex: 0 0 250px;
+        flex: 0 0 200px;
 
         .me__img {
-        width: 100%;
-        height: auto;
-        border-radius: 20%;
-        object-fit: cover;
+            width: 100%;
+            height: auto;
+            border-radius: 20%;
+            object-fit: cover;
         }
     }
 
     .about-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        min-width: 700px;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
         gap: 2rem;
         flex: 1;
     }
@@ -44,21 +45,21 @@
         text-align: left;
 
         .icon {
-        font-size: 1.8rem;
-        color: #333;
-        margin-top: 4px;
+            font-size: 1.8rem;
+            color: #333;
+            margin-top: 4px;
         }
 
         h4 {
-        margin: 0;
-        font-size: 1rem;
-        font-weight: 600;
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
         }
 
         p {
-        margin: 0;
-        font-size: 0.95rem;
-        color: #444;
+            margin: 0;
+            font-size: 0.9rem;
+            color: #444;
         }
     }
 }
