@@ -5,7 +5,7 @@ const CrawlerDetail = () => {
         <div
             style={{
                 padding: '1rem',
-                color: '#333',
+                color: '#fff',
                 maxHeight: '70vh',
                 overflowY: 'auto',
                 textAlign: 'left',

@@ -6,7 +6,7 @@ const AverageDetail = () => {
             style={{
                 padding: '1rem',
                 lineHeight: 1.6,
-                color: '#333',
+                color: '#fff',
                 maxHeight: '70vh',
                 overflowY: 'auto',
                 textAlign: 'left',
