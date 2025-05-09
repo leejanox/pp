@@ -1,0 +1,64 @@
+.about-me {
+    padding: 4rem 2rem;
+    background: #fff;
+
+    h2 {
+        text-align: center;
+        font-size: 2.3rem;
+        margin-bottom: 3rem;
+        font-weight: bold;
+    }
+
+    .content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20rem;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .me {
+        flex: 0 0 250px;
+
+        .me__img {
+        width: 100%;
+        height: auto;
+        border-radius: 20%;
+        object-fit: cover;
+        }
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        gap: 2rem;
+        flex: 1;
+    }
+
+    .item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        text-align: left;
+
+        .icon {
+        font-size: 1.8rem;
+        color: #333;
+        margin-top: 4px;
+        }
+
+        h4 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+        }
+
+        p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #444;
+        }
+    }
+}
