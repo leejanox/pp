@@ -4,7 +4,7 @@ import { FaUser, FaCalendarAlt, FaMapMarkerAlt, FaPhone, FaEnvelope, FaGraduatio
 
 const AboutMeSection = () => {
     return (
-        <section className="about-me">
+        <section id='about'className="about-me">
             <h2>&lt;About Me /&gt;</h2>           
             <div className="content-wrapper">
                 <div className="me">
