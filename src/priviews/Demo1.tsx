@@ -1,7 +1,7 @@
 import Styles from '@styles/Demo.module.scss'
 import { Canvas, useFrame } from "@react-three/fiber"
 import * as THREE from 'three'
-import Ball from './demo1/Ball'
+import Ball from '@components/r3f/Ball'
 import { Bloom, EffectComposer } from '@react-three/postprocessing'
 import { useRef } from 'react'
 import { BlendFunction } from 'postprocessing'

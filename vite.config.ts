@@ -24,6 +24,8 @@ export default defineConfig({
       '@components': path.resolve(__dirname, './src/components'),
       '@styles': path.resolve(__dirname, './src/styles'),
       '@detailes': path.resolve(__dirname, './src/components/Detailes'),
+      '@r3f': path.resolve(__dirname, './src/components/r3f'),
+      '@shaders': path.resolve(__dirname, './src/shaders'),
     }
   }
 })

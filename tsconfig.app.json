@@ -32,7 +32,9 @@
       "@pages/*": ["./src/pages/*"],
       "@components/*": ["./src/components/*"],
       "@styles/*": ["./src/styles/*"],
-      "@detailes/*": ["./src/components/Detailes/*"]
+      "@detailes/*": ["./src/components/Detailes/*"],
+      "@r3f/*": ["./src/components/r3f/*"],
+      "@shaders/*": ["./src/shaders/*"]
     }
   },
   "include": ["src"]

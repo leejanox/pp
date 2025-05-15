@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import gsap from 'gsap';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import { BlendFunction } from 'postprocessing';
-import  ExpandingParticle  from './demo2/ExpandingParticle';
+import  ExpandingParticle  from '@components/r3f/ExpandingParticle';
 
 
 interface OverlayProps {

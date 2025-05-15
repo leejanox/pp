@@ -1,5 +1,5 @@
-import vt from './ExpandingParticleVertex.glsl?raw'
-import fg from './ExpandingParticleFrag.glsl?raw'
+import vt from '@shaders/ParticleVertex.glsl'
+import fg from '@shaders/ParticleFragment.glsl'
 import { useRef} from 'react'
 import { forwardRef , useImperativeHandle } from 'react'
 import { useMemo } from "react"

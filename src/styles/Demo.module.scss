@@ -34,6 +34,11 @@
             align-items: center; justify-content: end;
             padding-bottom: 70px;
 
+            h1{
+                font-size: 1em;
+                color: white;
+            }
+
             &__buttonGroup{
                 display: flex; flex-direction: row;
                 align-items: center; justify-content: center;
