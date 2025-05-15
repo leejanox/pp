@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import gsap from 'gsap'
-import '../styles/HeroSection.scss'
+import '@styles/HeroSection.scss'
 
 const HeroSection = () => {
   const h2Ref = useRef<HTMLHeadingElement>(null)

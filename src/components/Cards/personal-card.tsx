@@ -1,6 +1,5 @@
-
+import '@styles/PersonalCard.scss'
 import React, { useState } from 'react'
-import '../styles/PersonalCard.scss'
 import { Github } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -9,11 +8,12 @@ interface PersonalCardProps {
   description: string
   image: string
   link: string
+  demoLink: string
   tags: string[]
   modalContent?: React.ReactNode
 }
 
-const PersonalCard: React.FC<PersonalCardProps> = ({ title, description, image, link, tags, modalContent }) => {
+const PersonalCard: React.FC<PersonalCardProps> = ({ title, description, image, link, demoLink, tags, modalContent }) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -32,6 +32,9 @@ const PersonalCard: React.FC<PersonalCardProps> = ({ title, description, image, 
           </div>
         </div>
         <div className="personal-card__footer">
+          <Link to={demoLink} target="_blank" className="personal-card__link" onClick={(e) => e.stopPropagation()}>
+            <span>Preview</span>
+          </Link>
           <Link to={link} target="_blank" className="personal-card__link" onClick={(e) => e.stopPropagation()}>
             <Github size={16} />
             <span>View on GitHub</span>

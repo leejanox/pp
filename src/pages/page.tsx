@@ -1,9 +1,8 @@
-
-import AboutMeSection from '../components/AboutMeSection'
-import HeroSection from '../components/HeroSection'
-import ProjectSection from '../components/ProjectSection'
-import TechStackSection from '../components/TechStackSection'
-import PersonalSection from '../components/PersonalSection'
+import AboutMeSection from '@sections/AboutMeSection'
+import HeroSection from '@sections/HeroSection'
+import ProjectSection from '@sections/ProjectSection'
+import TechStackSection from '@sections/TechStackSection'
+import PersonalSection from '@sections/PersonalSection'
 
 const Page = () => {
   return (

@@ -19,14 +19,21 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "typeRoots": [
       "./node_modules/@types",
       "./src/types"
     ],
+    "paths": {
+      "@sections/*": ["./src/components/Sections/*"],
+      "@priviews/*": ["./src/priviews/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@components/*": ["./src/components/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@detailes/*": ["./src/components/Detailes/*"]
+    }
   },
   "include": ["src"]
 }

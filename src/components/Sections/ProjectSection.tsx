@@ -1,10 +1,10 @@
-import '../styles/ProjectSection.scss'
-import AverageDetail from './AverageDetail'
-import CrawlerDetail from './CrawlerDetail'
-import PhishingDetail from './PhishingDetail'
-import PolarDetail from './PolarDetail'
-import ProjectCard from './project-card'
-import StairGameDetail from './StairGameDetail'
+import '@styles/ProjectSection.scss'
+import AverageDetail from '@components/Detailes/AverageDetail'
+import CrawlerDetail from '@components/Detailes/CrawlerDetail'
+import PhishingDetail from '@components/Detailes/PhishingDetail'
+import PolarDetail from '@components/Detailes/PolarDetail'
+import ProjectCard from '@components/Cards/project-card'
+import StairGameDetail from '@components/Detailes/StairGameDetail'
 
 const ProjectSection = () => {
   return (

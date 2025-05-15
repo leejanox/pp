@@ -1,4 +1,4 @@
-import '../styles/AboutMeSection.scss'
+import '@styles/AboutMeSection.scss'
 import { FaUser, FaCalendarAlt, FaMapMarkerAlt, FaPhone, FaEnvelope, FaGraduationCap } from 'react-icons/fa'
 
 

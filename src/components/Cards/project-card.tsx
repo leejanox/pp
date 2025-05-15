@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react'
-import '../styles/ProjectCard.scss'
+import '@styles/ProjectCard.scss'
 import { Github } from 'lucide-react'
 import { Link } from 'react-router-dom'
 

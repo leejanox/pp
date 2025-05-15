@@ -1,5 +1,4 @@
-import React from 'react'
-import '../styles/TechStackSection.scss'
+import '@styles/TechStackSection.scss'
 
 const stackData = [
   {
