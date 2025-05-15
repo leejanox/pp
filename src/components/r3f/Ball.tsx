@@ -19,7 +19,6 @@ const Ball = forwardRef<THREE.Points,BallProps>(({...props},ref) => {
             uTime: { value: 0 }, //scene time
             uColor : { value: new THREE.Vector3(.5,.5,.5)},
             uMouse : { value: new THREE.Vector3(0,0,0) },
-            uVolume: { value: 0. },
         },
         vertexShader:vt,
         fragmentShader:fg,
