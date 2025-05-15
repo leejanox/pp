@@ -34,9 +34,9 @@ const MainAnimation = ({active}:{active:number|'all'|null}) =>{
     const [bloomStrength,setBloomStrength] = useState(0.);
 
     //texture
-    const tt1 = useLoader(THREE.TextureLoader,'1_1.jpg');
-    const tt2 = useLoader(THREE.TextureLoader,'2_1.jpg');
-    const tt3 = useLoader(THREE.TextureLoader,'3_1.jpg');
+    const tt1 = useLoader(THREE.TextureLoader,'/public/1_1.jpg');
+    const tt2 = useLoader(THREE.TextureLoader,'/public/2_1.jpg');
+    const tt3 = useLoader(THREE.TextureLoader,'/public/3_1.jpg');
 
     //ref
     const gRef1 = useRef<THREE.Group>(null!);

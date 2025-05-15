@@ -1,7 +1,7 @@
-import { forwardRef, useMemo } from "react"
+import { forwardRef, useMemo}  from "react"
 import * as THREE from 'three'
-import vert from './vert.glsl'
-import frag from './frag.glsl'
+import vert from './vert.glsl?raw'
+import frag from './frag.glsl?raw'
 
 interface BallProps {
     position?: [number, number, number]
