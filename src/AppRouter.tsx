@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom"
 import Page from "@pages/page"
-import Demo1 from "@priviews/Demo1"
-import Demo2 from "@priviews/Demo2"
-import Demo3 from "@priviews/Demo3"
+import Demo1 from "@previews/Demo1"
+import Demo2 from "@previews/Demo2"
+import Demo3 from "@previews/Demo3"
 
 
 const Approuter = () => {

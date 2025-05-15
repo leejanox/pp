@@ -28,7 +28,7 @@
     ],
     "paths": {
       "@sections/*": ["./src/components/Sections/*"],
-      "@priviews/*": ["./src/priviews/*"],
+      "@previews/*": ["src/previews/*"],
       "@pages/*": ["./src/pages/*"],
       "@components/*": ["./src/components/*"],
       "@styles/*": ["./src/styles/*"],

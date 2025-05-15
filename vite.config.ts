@@ -19,7 +19,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@sections': path.resolve(__dirname, './src/components/Sections'),
-      '@priviews': path.resolve(__dirname, './src/priviews'),
+      '@previews': path.resolve(__dirname, './src/previews'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@components': path.resolve(__dirname, './src/components'),
       '@styles': path.resolve(__dirname, './src/styles'),
